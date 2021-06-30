@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div id="desktopHeader">
+            <a href="#info">Личная информация</a>
+            <a href="#exp">Опыт</a>
+            <a href="#jscript">JavaScript</a>
+            <a href="#about">О себе</a>
+        </div>
+        <div id="mobileHeader">
+            <a href="javascript:void(0);" class="icon" onclick="dropDown()">
+                <img src="./images/menu.png" alt="">
+            </a>
+            <div id="myLinks">
+                <a href="#info">Личная информация</a>
+                <a href="#exp">Опыт</a>
+                <a href="#jscript">JavaScript</a>
+                <a href="#about">О себе</a>
+            </div>
+        </div>
+    </header>
+    <hr>
+    <form id="anketa" action="./sendmail/sendmail.php" method="POST">
+        <h1>Анкета</h1>
+        <div id="info">
+            <img src="./images/icon_1.png" alt="">
+            <h3>Личная информация</h3>
+            <div class="input">
+                <input type="text" name="name" placeholder="ФИО" required>
+                <input type="number" name="year" placeholder="Год рождения" required>
+                <input type="text" name="address" placeholder="Место проживания" required>
+                <input type="text" name="skype" placeholder="Skype" required>
+                <input type="email" name="email" placeholder="E-mail" required>
+            </div>
+        </div>
+        <div id="exp">
+            <img src="./images/icon_2.png" alt="">
+            <h3>Расскажите о своем опыте</h3>
+            <div class="input">
+                <div class="col_1">
+                    <input type="checkbox" name="experience[]" value="БЭМ/OOCSS">
+                    <label for="exp_1">БЭМ/OOCSS</label><br>
+                    <input type="checkbox" name="experience[]" value="Stylus/LESS/SASS">
+                    <label for="exp_2">Stylus/LESS/SASS</label><br>
+                    <input type="checkbox" name="experience[]" value="Работаю с SVG">
+                    <label for="exp_3">Работаю с SVG</label>
+                </div>
+                <div class="col_2">
+                    <input type="checkbox" name="experience[]" value="Верстаю семантично">
+                    <label for="exp_4">Верстаю семантично</label><br>
+                    <input type="checkbox" name="experience[]" value="ES5015/ES2016">
+                    <label for="exp_5">ES5015/ES2016</label><br>
+                    <input type="checkbox" name="experience[]" value="Gulp/GRUNT">
+                    <label for="exp_6">Gulp/GRUNT</label>
+                </div>
+                <div class="col_3">
+                    <input type="checkbox" name="experience[]" value="Webpack">
+                    <label for="exp_7">Webpack</label><br>
+                    <input type="checkbox" name="experience[]" value="jQuery">
+                    <label for="exp_8">jQuery</label><br>
+                    <input type="checkbox" name="experience[]" value="Использую GIT">
+                    <label for="exp_9">Использую GIT</label>
+                </div>
+            </div>
+        </div>
+        <div id="jscript">
+            <img src="./images/icon_3.png" alt="">
+            <h3>Уровень владения JavaScript</h3>
+            <div class="values">
+                <p>Не владею</p>
+                <p>Использую готовые решения</p>
+                <p>Использую готовые решения и умею переделывать</p>
+                <p id="last">Пишу сложный JS с нуля</p>
+            </div>
+            <input type="range" name="rangeSlider" min="0" max="3" value="0" id="rangeSlider">
+            <div id="triangle"></div>
+        </div>
+        <div id="about">
+            <img src="./images/icon_4.png" alt="">
+            <h3>Расскажите о себе</h3>
+            <p>Напишите несколько предложений, чем привлекла наша вакансия и что вы ожидаете от работы у нас</p>
+            <textarea name="comment" id="comment" cols="30" rows="10" form="anketa" required></textarea>
+        </div>
+        <input type="submit" id="submit" name="submit" value="Готово">
+    </form>
+    <script src="./js/main.js"></script>
+</body>
+</html>
