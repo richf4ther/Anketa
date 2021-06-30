@@ -1,0 +1,228 @@
+$desktopWidth: 768px;
+$mobileWidth: 95vw;
+$mainColor: #435993;
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("../fonts/Roboto-Regular.ttf");
+}
+@font-face {
+    font-family: 'Roboto-Thin';
+    src: url("../fonts/Roboto-Thin.ttf");
+}
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url("../fonts/Roboto-Light.ttf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: "Roboto-Light";
+}
+
+header {
+    width: $desktopWidth;
+    margin: 0 auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    @media only screen and (max-width: $desktopWidth) {
+        display: block;
+    }
+    #desktopHeader {
+        margin: 0 auto;
+        a {
+            font-size: 12pt;
+            text-decoration: none;
+            color: $mainColor;
+            margin: 0 30px;
+            &:hover {
+                color: black;
+            }
+        }
+        @media only screen and (max-width: $desktopWidth) {
+            display: none;
+        }
+    }
+    #mobileHeader {
+        display: none;
+        text-align: right;
+        img {
+            max-width: 40px;
+            margin-top: 10px;
+        }
+        #myLinks {
+            display: none;
+            padding: 10px;
+            margin-top: 4px;
+            border: 1px solid;
+            position: relative;
+            z-index: 2;
+            background-color: #fff;
+            a {
+                text-decoration: none;
+                color: $mainColor;
+                margin-top: 15px;
+            }
+        }
+        @media only screen and (max-width: $desktopWidth) {
+            display: block;
+        }
+    }
+    @media only screen and (max-width: $desktopWidth) {
+        width: $mobileWidth;
+    }
+}
+
+h1 {
+    margin-top: 100px;
+    font-family: "Roboto-Thin";
+    font-weight: 100;
+    font-size: 70pt;
+    @media only screen and (max-width: $desktopWidth) {
+        margin-top: 50px;
+        font-size: 48pt;
+    }
+}
+
+h3 {
+    font-size: 30pt;
+    font-weight: 100;
+    @media only screen and (max-width: $desktopWidth) {
+        font-size: 20pt;
+    }
+}
+
+#anketa {
+    width: $desktopWidth;
+    margin: 0 auto;
+    #info {
+        .input {
+            display: inline-grid;
+            input {
+                text-align: center;
+                margin: 10px 0;
+                padding: 10px 50px;
+                font-size: 24pt;
+                opacity: 0.5;
+                @media only screen and (max-width: $desktopWidth) {
+                    font-size: 14pt;
+                    padding: 10px 30px;
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: $desktopWidth) {
+        width: $mobileWidth;
+    }
+}
+
+#exp, #jscript, #about {
+    margin-top: 80px;
+}
+
+.col_1, .col_2, .col_3 {
+    display: inline-block;
+    width: 32%;
+    text-align: left;
+    @media only screen and (max-width: $desktopWidth) {
+        width: 100%;
+    }
+    input {
+        @media only screen and (max-width: $desktopWidth) {
+            margin-left: 25px;
+        }
+    }
+    label {
+        font-size: 16pt;
+    }
+}
+
+.values {
+    width: 100%;
+    p {
+        width: 24%;
+        display: inline-block;
+        text-align: start;
+        font-size: 11pt;
+        @media only screen and (max-width: $desktopWidth) {
+            width: 23%;
+            font-size: 6pt;
+        }
+    }
+    #last {
+        text-align: end;
+        width: 25%;
+    }
+}
+
+#rangeSlider {
+	-webkit-appearance: none;
+	width: 100%;
+	height: 0;
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 23px;
+        height: 26px;
+        background: url(../images/pointer.png);
+        cursor: pointer;
+        margin-top: 45px;
+    }
+    &::-moz-range-thumb {
+        width: 23px;
+        height: 26px;
+        background: url(../images/pointer.png);
+        cursor: pointer;
+        margin-top: 45px;
+    }
+    &::-ms-thumb {
+        width: 23px;
+        height: 26px;
+        background: url(../images/pointer.png);
+        cursor: pointer;
+        margin-top: 45px;
+    }
+}
+
+#triangle {
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid #e8e8e8;
+    border-left: $desktopWidth solid transparent;
+    margin-top: -15px;
+    @media only screen and (max-width: $desktopWidth) {
+        border-left: $mobileWidth solid transparent;
+    }
+}
+
+#about {
+    p {
+        width: 87%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 50px;
+        font-size: 16pt;
+        @media only screen and (max-width: $desktopWidth) {
+            font-size: 10pt;
+        }
+    }
+    textarea {
+        width: 87%;
+    }
+
+}
+
+#submit {
+    margin: 70px 0;
+    padding: 15px 30px;
+    border: 0;
+    border-radius: 10px;
+    background-color: $mainColor;
+    color: #fff;
+    font-size: 16pt;
+    cursor: pointer;
+}
+

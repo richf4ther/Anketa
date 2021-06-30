@@ -1,0 +1,279 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'Roboto-Thin';
+  src: url("../fonts/Roboto-Thin.ttf");
+}
+
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url("../fonts/Roboto-Light.ttf");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: "Roboto-Light";
+}
+
+header {
+  width: 768px;
+  margin: 0 auto;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    display: block;
+  }
+}
+
+header #desktopHeader {
+  margin: 0 auto;
+}
+
+header #desktopHeader a {
+  font-size: 12pt;
+  text-decoration: none;
+  color: #435993;
+  margin: 0 30px;
+}
+
+header #desktopHeader a:hover {
+  color: black;
+}
+
+@media only screen and (max-width: 768px) {
+  header #desktopHeader {
+    display: none;
+  }
+}
+
+header #mobileHeader {
+  display: none;
+  text-align: right;
+}
+
+header #mobileHeader img {
+  max-width: 40px;
+  margin-top: 10px;
+}
+
+header #mobileHeader #myLinks {
+  display: none;
+  padding: 10px;
+  margin-top: 4px;
+  border: 1px solid;
+  position: relative;
+  z-index: 2;
+  background-color: #fff;
+}
+
+header #mobileHeader #myLinks a {
+  text-decoration: none;
+  color: #435993;
+  margin-top: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+  header #mobileHeader {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    width: 95vw;
+  }
+}
+
+h1 {
+  margin-top: 100px;
+  font-family: "Roboto-Thin";
+  font-weight: 100;
+  font-size: 70pt;
+}
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    margin-top: 50px;
+    font-size: 48pt;
+  }
+}
+
+h3 {
+  font-size: 30pt;
+  font-weight: 100;
+}
+
+@media only screen and (max-width: 768px) {
+  h3 {
+    font-size: 20pt;
+  }
+}
+
+#anketa {
+  width: 768px;
+  margin: 0 auto;
+}
+
+#anketa #info .input {
+  display: -ms-inline-grid;
+  display: inline-grid;
+}
+
+#anketa #info .input input {
+  text-align: center;
+  margin: 10px 0;
+  padding: 10px 50px;
+  font-size: 24pt;
+  opacity: 0.5;
+}
+
+@media only screen and (max-width: 768px) {
+  #anketa #info .input input {
+    font-size: 14pt;
+    padding: 10px 30px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #anketa {
+    width: 95vw;
+  }
+}
+
+#exp, #jscript, #about {
+  margin-top: 80px;
+}
+
+.col_1, .col_2, .col_3 {
+  display: inline-block;
+  width: 32%;
+  text-align: left;
+}
+
+@media only screen and (max-width: 768px) {
+  .col_1, .col_2, .col_3 {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .col_1 input, .col_2 input, .col_3 input {
+    margin-left: 25px;
+  }
+}
+
+.col_1 label, .col_2 label, .col_3 label {
+  font-size: 16pt;
+}
+
+.values {
+  width: 100%;
+}
+
+.values p {
+  width: 24%;
+  display: inline-block;
+  text-align: start;
+  font-size: 11pt;
+}
+
+@media only screen and (max-width: 768px) {
+  .values p {
+    width: 23%;
+    font-size: 6pt;
+  }
+}
+
+.values #last {
+  text-align: end;
+  width: 25%;
+}
+
+#rangeSlider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 0;
+}
+
+#rangeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 23px;
+  height: 26px;
+  background: url(../images/pointer.png);
+  cursor: pointer;
+  margin-top: 45px;
+}
+
+#rangeSlider::-moz-range-thumb {
+  width: 23px;
+  height: 26px;
+  background: url(../images/pointer.png);
+  cursor: pointer;
+  margin-top: 45px;
+}
+
+#rangeSlider::-ms-thumb {
+  width: 23px;
+  height: 26px;
+  background: url(../images/pointer.png);
+  cursor: pointer;
+  margin-top: 45px;
+}
+
+#triangle {
+  width: 0;
+  height: 0;
+  border-bottom: 20px solid #e8e8e8;
+  border-left: 768px solid transparent;
+  margin-top: -15px;
+}
+
+@media only screen and (max-width: 768px) {
+  #triangle {
+    border-left: 95vw solid transparent;
+  }
+}
+
+#about p {
+  width: 87%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  font-size: 16pt;
+}
+
+@media only screen and (max-width: 768px) {
+  #about p {
+    font-size: 10pt;
+  }
+}
+
+#about textarea {
+  width: 87%;
+}
+
+#submit {
+  margin: 70px 0;
+  padding: 15px 30px;
+  border: 0;
+  border-radius: 10px;
+  background-color: #435993;
+  color: #fff;
+  font-size: 16pt;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */
